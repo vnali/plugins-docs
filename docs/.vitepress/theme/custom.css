@@ -1,0 +1,17 @@
+.statistics {
+    float: right;
+    margin-top: 6px;
+    font-size: 12px;
+    background: #eee;
+    padding: 3px 10px;
+    border-radius: 10px;
+}
+
+.VPHome .VPImage {
+    margin-top: 30px;
+}
+
+/* first item of nav is home. set a small padding  */
+#VPSidebarNav .group:first-of-type section {
+    padding-bottom: 10px !important;
+}
