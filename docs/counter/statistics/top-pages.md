@@ -2,11 +2,41 @@
 
 ## Twig
 ```twig
-{% set topPages = craft.counter.topPages(dataRange, siteId, limit) %} 
+{% set topPages = craft.counter.topPages(dataRange, siteId, limit, showElementTitle, filters) %} 
 ```
 
   - The dataRange can be `all`, `allIgnoreInterval`, `today`, `thisWeek`, `thisMonth`, `thisYear`, `yesterday`.
   - If `siteId` is not passed, the primary site is used. If `*` is passed, the top pages for all sites will be returned.
+  - `showElementTitle` is set to false by default. When this is set to true, if the top page is related to an element, the `page` in the returned result will be the element title instead of the element URL.
+  - By passing `filters`, you can filter the types of pages that you want to see in the top pages result. Currently, the filter provides two options:
+    - `items`: Pages related to which items appear in the top pages. Supported values are `page`, `entry`, `category`, `tag`, and other element types' full class names, such as `craft\commerce\elements\Product`.
+    - `sectionHandles`: If the page is related to an entry, only show entries that are in this section.
+
+### Twig examples
+<i><b>Top 5 pages for all sites and all types of pages without using element titles.</b></i>
+```twig
+craft.counter.topPages('today', '*', 5, false)
+```
+
+<i><b> Top 5 pages for all sites and all types of pages, using element titles instead of page URLs if the page refers to an element.</b></i>
+```twig
+craft.counter.topPages('today', '*', 5, true)
+```
+
+<i><b>Only show pages referring to the custom pages, entries, tags, categories, and commerce products.</b></i>
+```twig
+craft.counter.topPages('today', '*', 5, true, filters: {items: ["page", "entry", "tag", "category","craft\\commerce\\elements\\Product"]})
+```
+
+<i><b>Show all pages but filter entries to sections with the handle equal to "section1".</b></i>
+```twig
+craft.counter.topPages('today', '*', 5, false, filters: {sectionHandles: ["section1"]})
+```
+
+<i><b>Show only entry pages and only entries inside sections with handles equal to "section1" and "section2".</b></i>
+```twig
+craft.counter.topPages('today', '*', 5, true, filters: {items: ["entry"], sectionHandles: ["section1", "section2"]})
+```
 
 ## GraphQL
 ```graphql

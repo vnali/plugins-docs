@@ -28,7 +28,10 @@ Some useful widgets are available in the control panel to users with the `Access
    - It shows the maximum number of online site visitors and when it happened in a given date range on a chart.
 
 ## Top Pages
-  - It shows a list of top visited pages in a given date range for a site.
+  It shows a list of top visited pages in a given date range for a site.
+  - You can specify if you want to list site pages, pages related to an entry, category, or other element types that have a page.
+  - You can specify if you want to see the top pages for a specific section.
+  - By enabling the 'Show element's title' option, you can see the element title instead of the element URL.
 
 ## Trending Pages
   - It shows a list of trending pages in a given date range and site.

@@ -45,6 +45,11 @@ export default defineConfig({
             { text: 'Showcase', link: '/counter/showcase' },
           ]
         }, {
+          text: 'Import',
+          items: [
+            { text: 'Import from Views Work', link: '/counter/import-from-views-work' },
+          ]
+        }, {
           text: 'Widgets',
           items: [
             { text: 'List of Widgets', link: '/counter/widgets' },
