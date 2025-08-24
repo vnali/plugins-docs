@@ -37,7 +37,7 @@ const topPagesCounter = async () => {
 </script>
 
 <template>
-  Today’s page views: {{ counterData.pageVisits.today == 0 ? 1 : counterData.pageVisits.today }}
+  All time's page views: {{ counterData.pageVisits.all == 0 ? 1 : counterData.pageVisits.all }}
   <br>
   Today’s site views: {{ counterData.counter.visits == 0 ? 1 : counterData.counter.visits}}
   <br>
