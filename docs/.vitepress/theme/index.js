@@ -75,11 +75,12 @@ export default {
 
       try {
         const result = await graphql.query(SITE_PAGE_VISITS_QUERY, {
-          t: randomValue, // Pass the random value as a variable
           page: decodeURIComponent(window.location.href)
         }, {
-          private: true
+          private: true,
+          noCache: true
         });
+        // show the result, if result sent by api is related to the path we are visiting
         if (path === latestPath) {
           counterData.value = result
         } else {
@@ -90,9 +91,10 @@ export default {
       }
     };
     
+    // keep latestPath
     let latestPath = ''
     onMounted(() => {
-      counterData.value.pageVisits.today = '📊'
+      counterData.value.pageVisits.all = '📊'
       counterData.value.counter.visits = '📊'
       // Run JS on initial page load
       count();
@@ -104,7 +106,7 @@ export default {
     watch(
       () => route.path,
       () => {
-        counterData.value.pageVisits.today = '📊'
+        counterData.value.pageVisits.all = '📊'
         counterData.value.counter.visits = '📊'
         count();
         const currentPath = route.path

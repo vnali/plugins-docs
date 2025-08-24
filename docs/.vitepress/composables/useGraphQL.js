@@ -22,6 +22,10 @@ export function useGraphQL() {
         headers['Authorization'] = `Bearer ${GRAPHQL_TOKEN}`
       }
 
+      if (options.noCache) {
+        headers['X-Craft-Gql-Cache'] = 'no-cache'
+      }
+
       if (options.previewToken) {
         headers['X-Craft-Token'] = options.previewToken
       }
