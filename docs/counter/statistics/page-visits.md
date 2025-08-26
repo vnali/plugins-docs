@@ -34,6 +34,16 @@
 
 ### Getting page visits of entries and categories
 You can directly get the page visits for the page that the element is referring to.
+
+:::tip
+- The used schema should have access to the queried date ranges.
+- To prevent Craft from returning cached results, you should send an `X-Craft-Gql-Cache: no-cache` header to bypass the cache.
+:::
+
+:::warning
+If the URL of an element changes, the statistics for the old URL will no longer be linked to the element, but the data for the old URL will still be available and can be queried via `pageVisits(page: $oldUrl)`.
+:::
+
 ```graphql
 {
   entries {
@@ -50,7 +60,3 @@ You can directly get the page visits for the page that the element is referring 
   }
 }
 ```
-
-:::warning
-If the URL of an element changes, the statistics for the old URL will no longer be linked to the element, but the data for the old URL will still be available and can be queried via `pageVisits(page: $oldUrl)`.
-:::
