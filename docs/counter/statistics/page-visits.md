@@ -9,6 +9,7 @@
 - `$attributes`: an array of attributes which you want in return. The default is `['all', 'allIgnoreInterval', 'today', 'yesterday', 'thisWeek', 'previousWeek', 'thisMonth', 'previousMonth', 'thisYear', 'previousYear', 'lastVisit']`.  
 
 ## GraphQL
+### Getting page visits of a page
 - If the `siteId` of the requested page is not passed, the primary site is sent.
   - You can pass `*` to get the first matched page without filtering the site.
 - You can use `@dateConvert` directive with calendar, format, locale and timezone parameters to return the last visit in the intended format
@@ -30,3 +31,26 @@
 	}
 }
 ```
+
+### Getting page visits of entries and categories
+You can directly get the page visits for the page that the element is referring to.
+```graphql
+{
+  entries {
+    title
+    url
+    todayViews
+    thisWeekViews
+    thisMonthViews
+    thisYearViews
+    yesterdayViews
+    previousWeekViews
+    previousMonthViews
+    previousYearViews
+  }
+}
+```
+
+:::warning
+If the URL of an element changes, the statistics for the old URL will no longer be linked to the element, but the data for the old URL will still be available and can be queried via `pageVisits(page: $oldUrl)`.
+:::
