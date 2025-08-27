@@ -41,9 +41,13 @@ craft.counter.topPages('today', '*', 5, true, filters: {items: ["entry"], sectio
 ## GraphQL
 ```graphql
 {
-  topPages(dateRange: "all", siteId: "*", limit: 10, t: timestamp) {
-    page
-    visits
+  topPages(dateRange: "all", siteId: "*", limit: 10, showElementTitle: true, filters: {items: ["entry", "page"], sectionHandles: ["section1", "section2"]}, t: timestamp) {
+    url // Always returns the page URL
+    page // Returns the page URL. If the page is related to the element and showElementTitle is set to true, returns the element’s title instead
+    visits // Visits within the date range
+    elementId // Returns the element ID if the page is related to an element
+    elementType // Returns the element type if the page is related to an element
+    siteId // Returns the site ID of the page
   }
 }
 ```
