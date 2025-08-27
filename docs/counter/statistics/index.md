@@ -1,7 +1,7 @@
 # Fetch Site and Page Statistics
 
 - You can fetch site and page statistics on your site via Twig or GraphQL.
-- On the control panel and entry and category index pages, users can select table columns provided by the counter plugin to view page statistics for an element page.
+
 ::: tip
 - If there is no page for an entry/category, these columns will show empty.
 - If there is a page for an entry/category but no statistics are available yet, those columns will show 0.

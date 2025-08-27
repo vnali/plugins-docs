@@ -1,5 +1,11 @@
 # Page Visits
 
+## Page visits in the Control Panel
+- On the control panel and entry and category index pages, users can select table columns provided by the counter plugin to view page statistics for an element page.  
+<p align="center">
+<img src="https://vnali.dev/github/element-table-columns.png">
+</p>
+
 ## Twig
 ```twig
 {% set pageVisits = craft.counter.pageVisits($pageUrl, $siteId, $attributes) %}
