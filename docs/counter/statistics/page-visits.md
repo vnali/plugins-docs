@@ -6,6 +6,10 @@
 <img src="https://vnali.dev/github/element-table-columns.png">
 </p>
 
+:::warning
+If the URL of an entry or a category changes, the statistics for the old URL will no longer be linked to the entry/category, but the data for the old URL will still be available and can be queried via `pageVisits(page: $oldUrl)`.
+:::
+
 ## Twig
 ```twig
 {% set pageVisits = craft.counter.pageVisits($pageUrl, $siteId, $attributes) %}
