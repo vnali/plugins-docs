@@ -13,5 +13,6 @@ Craft 5/Craft 4.13 or higher.
 ## Main Features
 - Count site visits, visitors, and online users.
 - Count page visits.
+- Display top pages and trending pages on the site frontend, with filters by element types and sections of entries.
 - Support GraphQL and Twig for fetching site and page statistics.
 - Provide statistics widgets for user dashboards.
