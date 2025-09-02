@@ -39,14 +39,24 @@ Some useful widgets are available in the control panel to users with the `Access
 ## Trending Pages
   - It shows a list of trending pages in a given date range and site.
   - When the growth of the pages is displayed as a percentage, pages that did not receive any visits in the previous date ranges—such as yesterday, the past week, and the past month—are not shown.
+<p align="center">
+<img src="https://vnali.dev/github/trending-pages-widget.png">
+</p>
 
 ## Declining Pages
   - It displays a list of declining pages in terms of visits within a specified date range and site.
   - If a page does not have a visit in the current date range -today, this week, this month, this year- it does not show up in the result.
   - Obviously, this widget data can be more helpful when the current date range getting closer to the end -end of the day, end of the week, ....-
+<p align="center">
+<img src="https://vnali.dev/github/declining-pages-widget.png">
+</p>
+
 
 ## Not Visited Pages
   - You can see a list of pages that are not visited in a specified date range but visited earlier.
+<p align="center">
+<img src="https://vnali.dev/github/not-visited-pages-widget.png">
+</p>
 
 ## Pages Visits Statistics
   - By using this widget, you can view the latest statistics for every desired page of your site.
