@@ -14,6 +14,18 @@
     - `items`: Pages related to which items appear in the results. Supported values are `page`, `entry`, `category`, `tag`, and other element types' full class names, such as `craft\commerce\elements\Product`.
     - `sectionHandles`: If the page is related to an entry, only show entries that are in this section.
 
+The result is an array, and each item contains:
+``` php
+    url // Always returns the page URL
+    page // Returns the page URL. If the page is related to the element and showElementTitle is set to true, it returns the element’s title instead. If removeDomainFromResult is enabled, the domain part of the URL is removed.
+    current // Visits within the date range.
+    previous //Visits within the previous date range.
+    growth // Growth of visits
+    elementId // Returns the element ID if the page is related to an element.
+    elementType // Returns the element type if the page is related to an element.
+    siteId // Returns the site ID of the page.
+```
+
 ### Twig example
 <i><b>Show only trending entry pages and only entries inside sections with handles equal to "section1" and "section2".</b></i>
 ```twig
