@@ -10,4 +10,5 @@ Config items are:
 - `ipInEvent`: The default value is false, indicating that the IP address is not included in the event.
 - `anonymizedIpInEvent`: The default value is false, which means that the anonymized IP address is not included in the event.
 - `cacheWidgetsSeconds`: default is 0. when this is not set or is 0, widgets use default caching system so cached results are used as long as the cached data is valid
-- `autoImportJquery`: When the `Support outdated browsers` setting is enabled, the Counter plugin imports jQuery. Set this to false if your frontend already includes jQuery.
+- `autoImportJquery`: default value is true. When the `Support outdated browsers` setting is enabled, the Counter plugin imports jQuery. Set this to false if your frontend already includes jQuery.
+- `removeDomainFromResult`: The default value is false. When set to true, the domain part of the URL used as title is removed from the statistics results.
