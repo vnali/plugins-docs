@@ -12,7 +12,7 @@ To fetch top pages, the following parameters are available:
 The result is an array, and each item contains:
 ``` php
     url // Always returns the page URL
-    page // Returns the page URL. If the page is related to the element and showElementTitle is set to true, returns the element’s title instead
+    page // Returns the page URL. If the page is related to the element and showElementTitle is set to true, it returns the element’s title instead. If removeDomainFromResult is enabled, the domain part of the URL is removed.
     visits // Visits within the date range
     elementId // Returns the element ID if the page is related to an element
     elementType // Returns the element type if the page is related to an element
