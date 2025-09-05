@@ -36,11 +36,15 @@ craft.counter.trendingPages('today', '*', 'count', true, 5, filters: {items: ["e
 ```graphql
 {
   trendingPages(dateRange: "thisMonth", growthType: "count", ignoreNewPages: true, limit: 1, showElementTitle: true, filters: {items: ["entry", "page"], sectionHandles: ["section1", "section2"]}) {
-	page
-	current
-	previous
-	growth
-	debugMessage
+    page
+    url
+    current
+    previous
+    growth
+    elementId
+    elementType
+    siteId
+    debugMessage
   }
 }
 ```
