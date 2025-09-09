@@ -11,4 +11,5 @@ Config items are:
 - `anonymizedIpInEvent`: The default value is false, which means that the anonymized IP address is not included in the event.
 - `cacheWidgetsSeconds`: default is 0. when this is not set or is 0, widgets use default caching system so cached results are used as long as the cached data is valid
 - `autoImportJquery`: default value is true. When the `Support outdated browsers` setting is enabled, the Counter plugin imports jQuery. Set this to false if your frontend already includes jQuery.
-- `removeDomainFromResult`: The default value is false. When set to true, the domain part of the URL used as title is removed from the statistics results.
+- `removeDomainFromResult`: The default value is false. When set to true, the domain part of the URL used as title in widgets is removed from the statistics results.
+- `widgetTitleTruncateLength`: The default is 50. Maximum number of characters for widget titles. A value of 0 disables truncation; any other value truncates the title to the specified length.
