@@ -31,3 +31,5 @@ docs/telegram-bridge
 docs/studio
 docs/.vitepress/cache/
 docs/plugins.md
+docs/.vitepress/components/Payment.vue
+docs/counter/payment.md
