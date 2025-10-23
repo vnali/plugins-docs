@@ -3,7 +3,7 @@ export const SITE_PAGE_VISITS_QUERY = `
     counter(dateRange: "today", siteId: "3") {
       visits
     }
-    pageVisits(page: $page, siteId:"*") {
+    pageVisits(page: $page, siteId:"3") {
       all
     }
   }
