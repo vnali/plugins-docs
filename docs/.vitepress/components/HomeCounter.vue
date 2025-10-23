@@ -39,5 +39,5 @@ const homeCounter = async () => {
 
 <template>
   <br>
-  <div style="font-size:12px;text-align:center"><b>Live in action -> </b>This week visits: {{ homeData.counter.visits == 0 ? 1 : homeData.counter.visits }} - Online Visitors: {{ homeData.counter.onlineVisitors == 0 ? 1 : homeData.counter.onlineVisitors }}</div>
+  <div style="font-size:12px;text-align:center"><b>Live in action -> </b>All visits: {{ homeData.counter.visits == 0 ? 1 : homeData.counter.visits }} - Online Visitors: {{ homeData.counter.onlineVisitors == 0 ? 1 : homeData.counter.onlineVisitors }}</div>
 </template>
